@@ -44,4 +44,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
+    <Button
+        android:id="@+id/two_subscriber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Second SUbs"
+        android:layout_margin="16dp"
+        android:onClick="secondSubClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

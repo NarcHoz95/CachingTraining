@@ -47,6 +47,6 @@ class DiskSource {
 
     fun roomCachedItems(context: Context) =
         myDatabase(context).myDao().myEntities()
-            .distinctUntilChanged()
+//            .distinctUntilChanged()
 //            .startWith(MyTable(0,"Initial", 0))
 }

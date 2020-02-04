@@ -40,7 +40,7 @@ class NetworkSource {
         Observable.create<String> {
             it.onNext(maps[counter % maps.size].also { counter++ })
             Log.i("CachingDen", "model has been emitted by network source")
-//            it.onComplete()
+            it.onComplete()
 //            Log.i("CachingDen", "network source has been completed")
         }
             .delay(5, TimeUnit.SECONDS)

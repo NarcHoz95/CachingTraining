@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import com.aranteknoloji.cachingtraining.db.MyTable
 import com.aranteknoloji.cachingtraining.db.myDatabase
 import com.aranteknoloji.cachingtraining.repositories.RoomRepository
@@ -94,5 +95,11 @@ class MainActivity : AppCompatActivity() {
 
     fun makeNetCall(view: View) {
         dataSource.makeNetworkCall(view.context)
+    }
+
+    fun secondSubClick(view: View) {
+        val dis = dataSource.roomCachedItems(view.context)
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe ({ (view as Button).text = it.firstOrNull()?.nameId }, Throwable::printStackTrace)
     }
 }
